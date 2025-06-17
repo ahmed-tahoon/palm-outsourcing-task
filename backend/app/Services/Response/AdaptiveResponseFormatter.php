@@ -56,7 +56,15 @@ class AdaptiveResponseFormatter implements ResponseFormatterInterface
                 return $this->formatXml($response);
             case 'json':
             default:
-                return $this->formatJson($response);
+                // Convert JsonResponse to Response for consistent return type
+                $jsonResponse = $this->formatJson($response);
+                return new Response(
+                    $jsonResponse->getContent(),
+                    $jsonResponse->getStatusCode(),
+                    array_merge($jsonResponse->headers->all(), [
+                        'Content-Type' => ['application/json']
+                    ])
+                );
         }
     }
 
