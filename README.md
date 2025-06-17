@@ -450,5 +450,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 For support, email your-email@example.com or create an issue in this repository.
 
-**Built with ❤️ by a Senior Full-Stack Developer** #   p a l m - o u t s o u r c i n g - t a s k  
- 
+**Built with ❤️ by a Senior Full-Stack Developer** #
