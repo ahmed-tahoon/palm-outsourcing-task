@@ -17,23 +17,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Http\JsonResponse;
 
-/**
- * Advanced Product Controller implementing SOLID principles with responsive design
- *
- * SOLID Principles Implemented:
- * - Single Responsibility: Only handles HTTP requests/responses
- * - Open/Closed: Extensible through strategies and interfaces
- * - Liskov Substitution: All dependencies are interface-based
- * - Interface Segregation: Uses specific interfaces for different concerns
- * - Dependency Inversion: Depends on abstractions, not concretions
- *
- * Responsive Design Features:
- * - Advanced Form Request validation
- * - Device-specific response adaptation
- * - Performance optimization
- * - Intelligent caching
- * - Rate limiting with adaptive backoff
- */
+
 class ProductController extends Controller
 {
     private ProductServiceInterface $productService;
