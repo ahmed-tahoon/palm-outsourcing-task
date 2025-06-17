@@ -18,8 +18,8 @@ class AppServiceProvider extends ServiceProvider
         // Bind interfaces to implementations (Dependency Inversion Principle)
         $this->app->bind(ResponseFormatterInterface::class, AdaptiveResponseFormatter::class);
 
-        // Note: ProductService would need to be implemented
-        // $this->app->bind(ProductServiceInterface::class, ProductService::class);
+        // Bind ProductService to its interface
+        $this->app->bind(ProductServiceInterface::class, ProductService::class);
     }
 
     /**
